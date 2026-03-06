@@ -154,7 +154,7 @@ export default function Footer() {
                         <span className="text-xs font-bold tracking-widest text-[#C9A063] mb-2">COMPANY</span>
                         <a href="#story" className="text-sm text-white/60 hover:text-white transition-colors">Our Story</a>
                         <a href="#locations" className="text-sm text-white/60 hover:text-white transition-colors">Locations</a>
-                        <a href="mailto:tibco.coffee@gmail.com" className="text-sm text-white/60 hover:text-white transition-colors">Careers &nbsp;<span className="text-[#C9A063] text-[10px] uppercase font-bold bg-[#C9A063]/10 px-2 py-0.5 rounded-full">Hiring</span></a>
+                        <a href="mailto:coffee.tibco@gmail.com" className="text-sm text-white/60 hover:text-white transition-colors">Careers &nbsp;<span className="text-[#C9A063] text-[10px] uppercase font-bold bg-[#C9A063]/10 px-2 py-0.5 rounded-full">Hiring</span></a>
                         <a href="#locations" className="text-sm text-white/60 hover:text-white transition-colors">Franchise</a>
                     </div>
 
