@@ -114,9 +114,12 @@ export default function LocationsShowcase() {
                             <div className="absolute inset-0 w-full h-full bg-[#111] overflow-hidden">
                                 <AnimatePresence initial={false}>
                                     <motion.img
-                                        key={imageToShow} // Key change triggers AnimatePresence
+                                        key={imageToShow}
                                         src={imageToShow}
                                         alt={loc.name}
+                                        loading="lazy"
+                                        width={600}
+                                        height={600}
                                         className="absolute inset-0 w-full h-full object-cover"
                                         initial={{ opacity: 0, scale: 1.1 }}
                                         animate={{
@@ -202,6 +205,9 @@ export default function LocationsShowcase() {
                                     key={imageToShow}
                                     src={imageToShow}
                                     alt={loc.name}
+                                    loading="lazy"
+                                    width={400}
+                                    height={208}
                                     className="absolute inset-0 w-full h-full object-cover"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}

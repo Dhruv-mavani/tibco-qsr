@@ -1,16 +1,19 @@
 "use client";
 
 import React, { useRef } from 'react';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
-import InteractiveMenu from '@/components/InteractiveMenu';
-import GalleryCarousel from '@/components/GalleryCarousel';
-import LocationsSection from '@/components/LocationsSection';
-import LocationsShowcase from '@/components/LocationsShowcase';
-import AboutUs from '@/components/AboutUs';
-import FeaturesBento from '@/components/FeaturesBento';
-import ReviewsSection from '@/components/ReviewsSection';
-import Footer from '@/components/Footer';
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
+
+// Lazy-load below-fold components to reduce initial bundle size
+const InteractiveMenu = dynamic(() => import('@/components/InteractiveMenu'), { ssr: false });
+const GalleryCarousel = dynamic(() => import('@/components/GalleryCarousel'), { ssr: false });
+const LocationsSection = dynamic(() => import('@/components/LocationsSection'), { ssr: false });
+const LocationsShowcase = dynamic(() => import('@/components/LocationsShowcase'), { ssr: false });
+const AboutUs = dynamic(() => import('@/components/AboutUs'), { ssr: false });
+const FeaturesBento = dynamic(() => import('@/components/FeaturesBento'), { ssr: false });
+const ReviewsSection = dynamic(() => import('@/components/ReviewsSection'), { ssr: false });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -44,7 +47,7 @@ export default function Home() {
       <div className="grain-overlay" />
 
       {/* HERO SECTION */}
-      <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-20">
+      <section aria-label="Hero" className="relative h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-20">
 
         {/* BREATHING WATERMARK LOGO (Option 2) */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
@@ -66,6 +69,8 @@ export default function Home() {
               ease: "easeInOut"
             }}
             /* Removed mix-blend and heavy blur to make it much sharper and clearer */
+            width={800}
+            height={800}
             className="w-[90vw] max-w-[800px] h-auto object-contain drop-shadow-sm"
           />
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function GalleryCarousel() {
@@ -41,9 +42,13 @@ export default function GalleryCarousel() {
                             key={idx}
                             className="w-[200px] md:w-[300px] h-[300px] md:h-[400px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg border border-black/[0.04] bg-white group cursor-pointer"
                         >
-                            <img
+                            <Image
                                 src={src}
-                                alt={`Cafe Moment ${idx}`}
+                                alt={`Cafe Moment ${(idx % 32) + 1}`}
+                                width={300}
+                                height={400}
+                                loading="lazy"
+                                quality={60}
                                 className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                             />
                         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
@@ -27,7 +28,7 @@ export default function Navbar() {
         className="fixed top-0 w-full z-[100] px-6 lg:px-20 py-6 flex justify-between items-center backdrop-blur-md border-b border-black/[0.05]"
       >
         <motion.div className="flex items-center gap-3">
-          <img src="/images/tibcoLogo_nobg.png" alt="Tibco Logo" className="h-12 w-auto object-contain" />
+          <Image src="/images/tibcoLogo_nobg.png" alt="Tibco Logo" width={48} height={48} className="h-12 w-auto object-contain" priority />
           <span className="text-[#111111] font-black tracking-tighter text-2xl mt-1">TIBCO.</span>
         </motion.div>
 
