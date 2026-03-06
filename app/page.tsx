@@ -8,6 +8,7 @@ import LocationsSection from '@/components/LocationsSection';
 import LocationsShowcase from '@/components/LocationsShowcase';
 import AboutUs from '@/components/AboutUs';
 import FeaturesBento from '@/components/FeaturesBento';
+import Footer from '@/components/Footer';
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 
 export default function Home() {
@@ -156,25 +157,7 @@ export default function Home() {
       <LocationsSection />
 
       {/* FOOTER */}
-      <footer className="bg-[#111111] text-white py-20 px-6 md:px-20 text-center md:text-left">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-          <div className="flex items-center gap-4">
-            <div>
-              <h2 className="text-3xl font-black tracking-tighter mb-1">TIBCO.</h2>
-              <p className="text-white/40 text-sm">The Independent Brewer's Coffee</p>
-            </div>
-          </div>
-
-          <div className="flex gap-8">
-            <a href="https://www.instagram.com/tibco.home/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold hover:text-[#C9A063] transition-colors">Instagram</a>
-            <a href="#" className="text-sm font-semibold hover:text-[#C9A063] transition-colors">Contact</a>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/10 flex justify-between text-xs text-white/30">
-          <p>&copy; 2026 Tibco Cafe. All rights reserved.</p>
-          <p>Designed with Intent.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
