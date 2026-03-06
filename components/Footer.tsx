@@ -152,10 +152,10 @@ export default function Footer() {
 
                     <div className="flex flex-col gap-3">
                         <span className="text-xs font-bold tracking-widest text-[#C9A063] mb-2">COMPANY</span>
-                        <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Our Story</a>
+                        <a href="#story" className="text-sm text-white/60 hover:text-white transition-colors">Our Story</a>
                         <a href="#locations" className="text-sm text-white/60 hover:text-white transition-colors">Locations</a>
-                        <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Careers &nbsp;<span className="text-[#C9A063] text-[10px] uppercase font-bold bg-[#C9A063]/10 px-2 py-0.5 rounded-full">Hiring</span></a>
-                        <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Franchise</a>
+                        <a href="mailto:tibco.coffee@gmail.com" className="text-sm text-white/60 hover:text-white transition-colors">Careers &nbsp;<span className="text-[#C9A063] text-[10px] uppercase font-bold bg-[#C9A063]/10 px-2 py-0.5 rounded-full">Hiring</span></a>
+                        <a href="#locations" className="text-sm text-white/60 hover:text-white transition-colors">Franchise</a>
                     </div>
 
                     <div className="flex flex-col gap-3">
@@ -163,12 +163,7 @@ export default function Footer() {
                         <a href="https://www.instagram.com/tibco.home/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-white transition-colors flex items-center gap-2">
                             Instagram <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-50"><path d="M7 17L17 7" /><path d="M7 7h10v10" /></svg>
                         </a>
-                        <a href="#" className="text-sm text-white/60 hover:text-white transition-colors flex items-center gap-2">
-                            TikTok <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-50"><path d="M7 17L17 7" /><path d="M7 7h10v10" /></svg>
-                        </a>
-                        <a href="#" className="text-sm text-white/60 hover:text-white transition-colors flex items-center gap-2">
-                            Twitter <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-50"><path d="M7 17L17 7" /><path d="M7 7h10v10" /></svg>
-                        </a>
+
                     </div>
                 </div>
 
