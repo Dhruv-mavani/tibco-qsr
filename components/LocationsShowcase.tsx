@@ -90,8 +90,9 @@ export default function LocationsShowcase() {
     };
 
     return (
-        <section className="bg-white py-12 px-6 max-w-[1400px] mx-auto hidden md:block">
-            <div className="w-full h-[600px] flex gap-4 rounded-[2rem] overflow-hidden p-4 bg-[#FAFAFA] border border-black/[0.03]">
+        <section className="bg-white py-12 px-6 max-w-[1400px] mx-auto">
+            {/* Desktop: Expanding panels */}
+            <div className="w-full h-[600px] gap-4 rounded-[2rem] overflow-hidden p-4 bg-[#FAFAFA] border border-black/[0.03] hidden md:flex">
                 {SHOWCASE_LOCATIONS.map((loc, index) => {
                     const isHovered = hoveredIndex === index;
                     const isAnythingHovered = hoveredIndex !== null;
@@ -182,6 +183,38 @@ export default function LocationsShowcase() {
                                 </motion.div>
                             </div>
                         </motion.a>
+                    );
+                })}
+            </div>
+
+            {/* Mobile: Stacked cards */}
+            <div className="flex flex-col gap-4 md:hidden">
+                {SHOWCASE_LOCATIONS.map((loc) => {
+                    const imageToShow = loc.images[currentImageIndex % loc.images.length];
+                    return (
+                        <a
+                            key={loc.id}
+                            href={loc.href}
+                            className="relative h-52 rounded-2xl overflow-hidden block"
+                        >
+                            <AnimatePresence initial={false}>
+                                <motion.img
+                                    key={imageToShow}
+                                    src={imageToShow}
+                                    alt={loc.name}
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                                />
+                            </AnimatePresence>
+                            <div className={`absolute inset-0 bg-gradient-to-t ${loc.themeColor} z-10`} />
+                            <div className="relative z-20 p-6 h-full flex flex-col justify-end">
+                                <h3 className="text-xl font-black text-white">{loc.name}</h3>
+                                <p className="text-white/70 text-xs mt-1">{loc.address}</p>
+                            </div>
+                        </a>
                     );
                 })}
             </div>

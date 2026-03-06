@@ -135,7 +135,7 @@ export default function Footer() {
 
                 {/* Bottom Links Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
-                    <div className="col-span-2 md:col-span-1">
+                    <div className="col-span-2 md:col-span-1 order-first">
                         <h4 className="text-2xl font-black tracking-tighter mb-1 relative inline-block group cursor-pointer">
                             TIBCO.
                         </h4>

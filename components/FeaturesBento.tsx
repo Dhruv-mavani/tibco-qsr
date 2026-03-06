@@ -102,36 +102,36 @@ export default function FeaturesBento() {
                     </motion.div>
 
                     {/* Bento Box 4 - Seamless Experience */}
-                    <motion.div
+                    <motion.a
+                        href="https://wa.me/917069369000"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.45 }}
-                        className="md:col-span-2 relative group rounded-[2rem] bg-gradient-to-r from-[#FAF9F6] to-white overflow-hidden p-10 md:p-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border border-black/[0.03] hover:border-black/[0.08] transition-all duration-500 shadow-sm"
-                    >   <a href="https://wa.me/917069369000" target="_blank">
-                            <div className="flex items-start gap-6">
-                                <div className="w-14 h-14 bg-[#111] rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-[#C9A063] transition-colors duration-500">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="m9 12 2 2 4-4" /></svg>
-                                </div>
-                                <div>
-                                    <h3 className="text-2xl font-bold mb-2 text-[#111]">Seamless Experience</h3>
-                                    <p className="text-[#555] max-w-md text-sm leading-relaxed">
-                                        From rapid ordering to instant pickup, every touchpoint is designed for ultimate convenience without sacrificing the welcoming atmosphere you love.
-                                    </p>
-                                </div>
+                        className="md:col-span-2 relative group rounded-[2rem] bg-gradient-to-r from-[#FAF9F6] to-white overflow-hidden p-10 md:p-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border border-black/[0.03] hover:border-black/[0.08] transition-all duration-500 shadow-sm no-underline"
+                    >
+                        <div className="flex items-start gap-5 sm:gap-6 flex-1">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#111] rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-[#C9A063] transition-colors duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="m9 12 2 2 4-4" /></svg>
                             </div>
-                        </a>
-                        <a href="https://wa.me/917069369000" target="blank">
-                            <motion.div
-                                whileHover={{ scale: 1.05, x: 5 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="w-14 h-14 shrink-0 rounded-full bg-[#111] text-white flex items-center justify-center cursor-pointer shadow-lg hover:bg-[#C9A063] transition-colors duration-300"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-                            </motion.div>
-                        </a>
+                            <div>
+                                <h3 className="text-xl sm:text-2xl font-bold mb-2 text-[#111]">Seamless Experience</h3>
+                                <p className="text-[#555] max-w-md text-sm leading-relaxed">
+                                    From rapid ordering to instant pickup, every touchpoint is designed for ultimate convenience.
+                                </p>
+                            </div>
+                        </div>
 
-                    </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.05, x: 5 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full bg-[#111] text-white flex items-center justify-center shadow-lg group-hover:bg-[#C9A063] transition-colors duration-300 self-end sm:self-center"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                        </motion.div>
+                    </motion.a>
 
                 </div>
             </div>
